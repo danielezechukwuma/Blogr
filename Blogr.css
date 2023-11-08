@@ -3,15 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
     font-family: Tahoma;
-} 
+    overflow-x: hidden;
+}
+
+.display-second{
+    display: none;
+}
 header{
     background-image: url(https://drive.google.com/uc?export=view&id=1UXOwdsDOCjq62Vx0CVQ47y9tpwL2RV7I);
-    background-size: 100%;
-    background-position:inherit;
+    background-size: 150%;
+    background-position:center;
     background-color: #FF6D66;
+    background-repeat: no-repeat;
     width: 100%;
     height: 45vw;
     border-radius: 0 0 0 100px;
@@ -23,7 +30,7 @@ header img{
 }
 .first-div{
     display: flex;
-    padding: 90px 90px 0px 200px ;
+    padding: 90px 0px 0px 10vw;
     margin-bottom: 80px;
 }
 nav{
@@ -43,6 +50,10 @@ nav select{
 header a{
     text-decoration: none;
     color: #F2C4BE;
+}
+.links-ydiv{
+    display: flex;
+    grid-gap: 20px;
 }
 .text{
     text-align: center;
@@ -108,7 +119,7 @@ color: #1C3D55;
 }
 .sdiv{
     max-width: 40%;
-    margin-left: 40px;
+    padding-left: 10vw;
     padding-top: 15vw;
 }
 .sdiv h2{
@@ -190,7 +201,7 @@ footer{
     padding-top: 80px;
 }
 .ffirst img{
-    padding-left: 5vw;
+    padding-left: 10vw;
     padding-bottom: 10vw;
 }
 .fsecond{
@@ -220,7 +231,9 @@ footer{
 .cul{
     margin-top: -25px;
 }
-
+.hamburger{
+    display: none;
+}
 /**mobile veiw**/
 @media screen and (max-width: 600px) {
  
@@ -228,20 +241,38 @@ footer{
         width: 100%;
         font-family: Tahoma;
     } 
+    .display-first{
+        display: none;
+    }
+    .display-second{
+        display: block;
+    }
+    .ydiv{
+        display: none;
+    }
+    .links-ydiv{
+        display:none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .icon{
+        display: flex;
+        gap: 45vw;
+    }
     header{
         background-image: url(https://drive.google.com/uc?export=view&id=1UXOwdsDOCjq62Vx0CVQ47y9tpwL2RV7I);
         background-size: 100%;
         background-position:inherit;
         background-color: #FF6D66;
         width: 100%;
-        height: 125vw;
+        height: 190vw;
         border-radius: 0 0 0 100px;
         color: white;
         justify-content: space-between;
     }
     .first-div{
-        display: flex;
-        padding: 90px 90px 0px 200px ;
+         display: flex;
     }
     nav{
         display: flex;
@@ -266,17 +297,17 @@ footer{
         width: 100%;
     }
     .text h1{
-        width: 85vw;
-        margin-left: 10vw;
-        font-size: 50px;
-        margin-bottom: 40px;
+        padding-top: 10vw;
+        font-size: 42px;
+        font-family: serif;
+        margin: 5vw;
     }
+    
     .text p{
-        font-size: 21px;
-        width: 55vw;
-        color: #F2C4BE;;
-        margin-left: 25vw;
-        margin-bottom: 40px;
+        font-size: 22px;
+        color: #F2C4BE;
+        margin: 5vw;
+    
     }
     .links{
         display: flex;
@@ -285,6 +316,8 @@ footer{
     }
     #hlinks{
         font-size: 22px;
+        padding-left: 8vw;
+        padding-top: 18vw;
     }
     #white{
         background-color: white;
@@ -312,13 +345,14 @@ footer{
     
     .fclass{
     max-width: 100%;
-       margin-top: 30vw;
+    margin-top: 30vw;
     height: 80vw;
     padding-top: 10px;
     color: #1C3D55;
-        margin-left: 10vw;
-        margin-right: 10vw;
-        text-align: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center;
+    margin-bottom: 215vw;
     }
     .fclass h1{
         text-align: center;
@@ -333,57 +367,65 @@ footer{
     }
     .sdiv{
         max-width: 100%;
-        margin-left: 40px;
-        padding-top: 0vw;
+        margin-left: 0px;   
+        padding-left: 0px;
+        padding-top: 0px;
     }
     .sdiv h2{
-        margin-top: 20px;
-        margin-left: 15vw;
-        font-size: 4vw;
-        width: 40vw;
+        font-size: 7vw;
         margin-bottom: 20px;
     }
     .sdiv p{
-        font-size: 23px;
-        width: 70vw;
+        font-size: 18.2px;
     }
     .tdiv{
         max-width: 100%;
     }
-    .tdiv img{
-        width: 80%;
-        height:70vw;
+    
+    .tdiv img{ 
+        height: 72vw;
+        width: 100%;
+        margin-top: 8vw;
     }   
     .sclass{
-        margin-top: 110vw;
-        margin-bottom: 10vw;
-        display: flex;
-        flex-direction: column;
+        
+        display:block;
         background-image:url(https://drive.google.com/uc?export=view&id=1ttKbOnKvHKD7VPLz-YAjCohhr7Gz0_Pp);
         background-position: left;
         background-size: cover;
         background-color: #3C3F60;
         border-radius: 0px 100px 0px 100px;
-        height: 150vw;
+        height: 170vw;
         align-items: center;
-        color: #FDFEFD;  
+        color: #FDFEFD;
+        position: relative;
     }
     .rdiv{
-        width: 100%;
+        max-width: 100%;
     } 
     .rdiv img{
+        position: absolute;
         margin: 0;
+        max-width: 100%;
+        left: 0;
+        top: -183px;
     }
     .ndiv{
-        width: 100%;
+        width: auto; 
+        padding-top: 60vw; 
+        text-align: center;
+        padding-right: 40px;
+        margin: 0;
+        display: block;
     }
-    .sclass h2{
-        text-align: left;
+    .ndiv h2{
+        text-align: center;
         font-size: 40px;  
     }
     .sclass p{
-        font-size:  20px;
-        max-width: 80%;
+        font-size: 19.5px;
+        max-width: 100%;
+        padding-left: 4vw;
     }
     
     .tclass{
@@ -411,13 +453,13 @@ footer{
     }
     .ediv h2{
         font-size: 30px;
-        margin-left: 17vw;
+        margin-left: 13vw;
         margin-bottom: 30px;
     }
     .ediv p{
         text-align: center;
         width: 93vw;
-        font-size: 30px;
+        font-size: 20.5px;
     }
     
     /**footer**/
@@ -426,7 +468,7 @@ footer{
     footer{
         background-color: #24242C;
         width: 100%;
-        height: 150vw;
+        height: 225vw;
     }
     .ffirst{
         max-width: 100%;
@@ -447,14 +489,15 @@ footer{
     }
     .fsecond ul{
         list-style: none;
-        margin-bottom: 20px
+        margin-bottom: 40px
     }
     .fsecond li{
         margin-bottom: 15px;
         font-size: 20px;
     }
     .zdiv a{
-        font-size: 30px;
+        font-size: 20px;
+        font-weight:bold ;
     }
     .aul{
         margin-top: 20px;
